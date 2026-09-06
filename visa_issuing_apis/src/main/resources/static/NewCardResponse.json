@@ -1,0 +1,26 @@
+{
+  "hdr": {
+    "prtcolVrsn": "string",
+    "msgIdentfctn": {
+      "id": "stringstringstr",
+      "reqstId": "string",
+      "clientId": "string",
+      "correlatnId": "string"
+    }
+  },
+  "envt": {
+    "card": {
+      "panRefIdr": "V-0123456789012345678901",
+      "panFourLastDgts": "1234"
+    }
+  },
+  "rslts": [
+    {
+      "tp": "stri",
+      "rslt": "stri"
+    }
+  ],
+  "prcgRslt": {
+    "rsltDtls": "00"
+  }
+}
