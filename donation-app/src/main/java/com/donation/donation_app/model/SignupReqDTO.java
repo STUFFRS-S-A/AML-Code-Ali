@@ -1,0 +1,25 @@
+package com.donation.donation_app.model;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.Data;
+
+@Data
+public class SignupReqDTO {
+
+    private String firstName;
+    private String lastName;
+    private String phoneNo;
+    private String dob;
+    private String email;
+    @NotBlank(message = "Password is mandatory")
+    @Pattern(
+            regexp = "^(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_])[A-Za-z\\d\\W_]{6,}$",
+            message = "Password must be at least 6 characters long, include at least one uppercase letter, one number, and one special character.",
+            groups = {PasswordRequired.class, PasswordOptional.class}
+    )
+    private String password;
+    public interface PasswordRequired {}
+    public interface PasswordOptional {}
+
+}
